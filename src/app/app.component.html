@@ -1,0 +1,45 @@
+﻿
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!--  <span>HOME</span> -->
+       <span><a href="/">HOME</a></span>
+       <span class="spacer"></span>
+       <a mat-button routerLink="/register">Register</a>
+       <a mat-button routerLink="/login">Login</a>
+    </mat-toolbar-row>
+ </mat-toolbar>
+ <!-- Toolbar -->
+ <span><a href="/">HOME</a></span>
+
+<mat-toolbar color="primary" class="header">
+   <div>Student Records</div>
+   <span class="nav-tool-items">
+     <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+   </span>
+ </mat-toolbar>
+ 
+ <mat-sidenav-container>
+   <!-- Sidenav -->
+   <mat-sidenav
+     #sidenav
+     [mode]="isBiggerScreen() ? 'over' : 'side'"
+     [(opened)]="opened"
+     [fixedInViewport]="true"
+     [fixedTopGap]
+   >
+     <mat-nav-list>
+       <a mat-list-item routerLinkActive="active" routerLink="/registration>
+         <mat-icon>register</mat-icon>register
+       </a>
+       <a mat-list-item routerLinkActive="active" routerLink="/Login">
+         <mat-icon>Login</mat-icon> login
+       </a>
+     </mat-nav-list>
+   </mat-sidenav>
+ 
+   <!-- Main content -->
+   <mat-sidenav-content>
+     <router-outlet></router-outlet>
+   </mat-sidenav-content>
+ </mat-sidenav-container>
+ 

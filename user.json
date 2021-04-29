@@ -1,0 +1,22 @@
+{
+  "Home": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "Registration": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Caroline kassidy",
+    "email": "Caroline.kassidy@publicis.com",
+    "age":"20years"
+
+  }
+}
