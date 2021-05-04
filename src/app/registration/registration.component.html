@@ -1,96 +1,75 @@
-<p>registration works!</p>
-<h2>Register</h2>
+
+<h2> User Registration Template</h2>
+
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-            <div *ngIf="f.firstName.errors.required">First Name is required</div>
-        </div>
+      </div>
     </div>
     <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-        </div>
+        <input type="text" formControlName="lastName" class="form-control"/>
+       </div>
     </div>
     <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-            <div *ngIf="f.username.errors.required">Username is required</div>
-        </div>
+        <label for="Email">Email</label>
+        <input type="text" formControlName="Email" class="form-control"/>
+      </div>
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">Password is required</div>
-            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-        </div>
+        <label for="Mobile">Mobile</label>
+        <input type="Mobile" formControlName="Mobile" class="form-control"/>
+      </div>
+  </div>
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="range" id="Age" name="Age min="20" max="60"/>
+      </div>
+     </div>
+     <div class="form-group">
+        <label for="State">State</label>
+         <option value="Maharashtra">Maharashtra</option>
+         <option value="Gujarat">Gujarat</option>
+         <option value="Madhyapradesh">Madhyapradesh</option>
+         <option value="Goa">Goa</option>
+         <option value="Delhi">Delhi</option>
+        <input type="State" formControlName="State" class="form-control"/>
+      </div>
     </div>
+    <div class="form-group">
+        <label for="Country">Country</label>
+         <option value="AFRICA">AFRICA</option>
+         <option value="INDIA">INDIA</option>
+         <option value="ENLAND">ENLAND</option>
+         <option value="SHRILANKA">SHRILANKA</option>
+         <option value="U.S">U.S</option>
+       <input type="Country" formControlName="Country" class="form-control"/>
+      </div>
+    </div>
+     <div class="form-group">
+        <label for="Address">Address</label>
+        <input type="Address" formControlName="Address" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="Tags">Tags</label>
+        <input type="Tags" formControlName="Tags" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="cricket">cricket</label>
+        <input type="cricket" formControlName="cricket" class="form-control">
+        <label for="Football>Football</label>
+        <input type="Football" formControlName="Football" class="form-control"/>
+        <label for="hockey">hockey</label>
+        <input type="hockey" formControlName="hockey" class="form-control"/>        
+      </div>
+    </div>                                                                 
+    <label><input type="checkbox">Subscribe to newsletter</label>                                                                
     <div class="form-group">
         <button [disabled]="loading" class="btn btn-primary">Register</button>
-        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+       
         <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
     </div>
 </form>
-<mat-toolbar>
-    <span>Registration</span>
- </mat-toolbar>
- <mat-card class="my-card">
-    <mat-card-content>
-         
-      <!-- CONTENT HERE -->
-         
-    </mat-card-content>
-    <mat-card-actions>
-      <!-- REGISTER BUTTON -->
-    </mat-card-actions>
- </mat-card>
- <mat-toolbar>
-    <span>Registration</span>
-  </mat-toolbar>
-  <mat-card class="my-card">
-     <mat-card-content>
-        <form class="my-form">
-          <!--FORM FIELDS HERE-->
-        </form>
-     </mat-card-content>
-     <mat-card-actions>
-        <!--REGISTER BUTTON HERE-->
-     </mat-card-actions>
-  </mat-card>
-  <mat-card-content>
-    <form class="my-form">
-       <mat-form-field class="full-width">
-              <mat-label>First Name</mat-label>
-              <input  matInput  placeholder="First name"  name="fname"  required>
-           </mat-form-field>
-           <mat-form-field class="full-width">
-              <mat-label>Last Name</mat-label>
-              <input  matInput  placeholder="Last Name" name="lname"  required>
-           </mat-form-field>
-           <mat-form-field class="full-width">
-              <mat-label>Address</mat-label>
-              <input  matInput  placeholder="Address" name="address"  required>
-           </mat-form-field>
-           <mat-form-field class="full-width">
-              <mat-label>Email</mat-label>
-              <input  matInput  placeholder="Email" name="email">
-           </mat-form-field>
-           <mat-form-field class="full-width">
-              <mat-label>Password</mat-label>
-              <input  matInput  placeholder="Password"  name="password">
-           </mat-form-field>
-    </form>
-  </mat-card-content>
-  <mat-card-content>
-    <form class="my-form">
-       <!--FORM FIELDS-->
-    </form>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button (click)="register()" color="primary">REGISTER</button>
-  </mat-card-actions>
