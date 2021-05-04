@@ -1,3 +1,53 @@
-<p>home works!</p>
+<p>Homepage</p>
 
-<p><a [routerLink]="['login']">Logout</a></p>
+	
+	<!-- Navbar items -->
+	<div id="navlist">
+		<a href="#">Home</a>
+		<a href="#">AboutUs</a>
+		<a href="#">Jobs/a>
+    <a href="#">Clients/a>
+		<a href="#">Employers</a>
+		<a href="#">Contact Us</a>
+      
+    <h2>I'm Looking for..</h2>
+      <div class="form-control">
+        <label class="header">Enter a Job description</label>
+        <input type="text" id="Enter a Job description" name="Enter a Job description" placeholder="Enter a Job description">
+        </div>
+		
+		<!-- search bar right align -->
+		<div class="search">
+			<form action="#">
+				<input type="text"
+					placeholder=" Search Courses"
+					name="search">
+				<button>
+					<i class="fa fa-search"
+						style="font-size: 18px;">
+					</i>
+				</button
+  <label class="container">Full Time
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Part Time/Casual/Freelance
+  <input type="checkbox">
+  <span class="checkmark"></span>
+   </label>
+  <div class="form-control">
+        <label class="header">Search your Location</label>
+        <input type="text" id="Search your Location" name="Search your Location" placeholder="Search your Location">
+        <select name="Location" id="Location">
+         <option value="Pune">Pune</option>
+         <option value="Mumbai">Mumbai</option>
+         <option value="Nashik">Nashik</option>
+         <option value="Hydrabad">Hydrabad</option>
+        </div>
+       </form>
+		
+	<button type="submit" class="registerbtn">Register</button>
+  
+
+	<p><a [routerLink]="['login']">Logout</a></p>
